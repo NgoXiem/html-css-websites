@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e50a556ae3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Restaurant Website</title>
+</head>
+<body>
+    <nav>
+        <button id="menu">
+            <i class="fas fa-bars fa-3x"></i>
+        </button>
+        <ul>
+            <li><a href="#">TACOS</a></li>
+            <li><a href="#">BEERS</a></li>
+            <li><a href="#">WINES</a></li>
+            <li><a href="#">DESSERTS</a></li>
+            <li><a href="#">RESERVATIONS</a></li>
+        </ul>
+    </nav>
+    <section class="wrapper_1">
+        <div class="header">
+            <h1>Terry's Taco Joint</h1>
+            <p>Pretty Good Tacos!</p>
+        </div>
+        <div class="item1">
+            <p class="price">$1.99</p>
+            <p class="product">Tacos</p>
+        </div>
+        <div class="item2">
+            <p class="price">$3.99</p>
+            <p class="product">Kombucha</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="menu">
+            <div class="item">
+                <div class="content-wrap">
+                    <i class="fas fa-cookie-bite fa-2x"></i>
+                    <h3>Tacos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>  
+                </div>
+            </div>
+            <div class="item">
+                <div class="content-wrap">
+                    <i class="fas fa-beer fa-2x"></i>
+                    <h3>Beer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>  
+                </div>
+            </div>
+            <div class="item">
+                <div class="content-wrap">
+                    <i class="fas fa-wine-bottle fa-2x"></i>
+                    <h3>Wine</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>  
+                </div>
+            </div>
+            <div class="item">
+                <div class="content-wrap">
+                    <i class="fas fa-music fa-2x"></i>
+                    <h3>Music</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>  
+                </div>
+            </div>
+        </section>
+        <section class="featured_taco">
+            <div class="img_taco">
+                <img src="./queso-taco.png" alt="">
+            </div>
+            <div class="content_taco">
+                <h2>Featured Taco</h2>
+                <p>Slim Profile, easy to hold and loaded with cheese.</p>
+                <p>This is the one you have been waiting for</p>
+                <button type="button" id="more">
+                    Learn More
+                    <i class="fas fa-arrow-right"></i>
+                    </button>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2>Instant Grams</h2>
+            <div class="image">
+                <img src="https://source.unsplash.com/random/201x202" alt="">
+                <img src="https://source.unsplash.com/random/202x203" alt="">
+                <img src="https://source.unsplash.com/random/203x204" alt="">
+                <img src="https://source.unsplash.com/random/204x205" alt="">
+                <img src="https://source.unsplash.com/random/205x206" alt="">
+                <img src="https://source.unsplash.com/random/206x207" alt="">
+                <img src="https://source.unsplash.com/random/207x208" alt="">
+                <img src="https://source.unsplash.com/random/208x209" alt="">
+                <img src="https://source.unsplash.com/random/209x210" alt="">
+                <img src="https://source.unsplash.com/random/210x211" alt="">
+            </div>
+        </section>
+    </main>
+    <script>
+        const btn = document.querySelector('#menu');
+        const ul = document.querySelector('ul');
+        const rect = btn.getBoundingClientRect();
+        
+        if(rect.height > 0){
+        btn.addEventListener('click', () => {
+            ul.classList.toggle('toggle');
+        });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+html {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+* {
+    margin: 0;
+}
+
+body {
+    padding: 50px;
+    margin:0;
+    background-image: linear-gradient(110deg, #f93d66, #6d47d9);
+}
+
+p {
+    font-weight: bolder;
+}
+/* Nav bar */
+#menu {
+    background-color: #ffc600;
+    border: none;
+    margin-bottom: 10px;
+    display: none;
+    
+}
+nav, section {
+    padding: 10px 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-gap: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    background-color: #ffc600;
+    margin: 0;
+    padding: 10px 0;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+.toggle {
+    display: none;
+}
+/* Header */
+    /*1. Products and Price  */
+.header {
+    grid-area: h;
+}
+
+.item1 {
+    grid-area: i1;
+}
+.item2 {
+    grid-area: i2;
+}
+.item1, .item2 {
+    background-color: #ffc600; 
+}
+.price {
+    font-size: 3.5em;
+    font-weight: 300;
+    margin: 0;
+    /* text-align: center; */
+}
+/* .product {
+    text-align: center;
+} */
+
+.header, .item1, .item2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    align-items: start;
+}
+.item1, .item2{
+    align-items: center;
+}
+    /* 2. Tittle */
+.header {
+    background: white url(./taco.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    min-height: 400px;
+    padding: 50px;
+    
+}
+.header h1, .header p {
+    background-color: #ffc600;
+    padding: 5px 5px;
+    margin: 10px 0;
+}
+.header p {
+    font-weight: 900;
+}
+h1 {
+    font-size: 1.8em;
+}
+
+/* Menu */
+section.menu, .item, .item p, h3 {
+    margin: 0;
+}
+section.menu {
+    margin-bottom: 10px;
+}
+
+.item {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.item p, .item h3 {
+    padding: 10px;
+}
+.item p {
+    color: rgba(0,0,0,0.5);
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+/* Featured Taco */
+.featured_taco {
+    background-color: #fff;
+    padding: 30px;  
+}
+
+.featured_taco {
+    align-items: center;
+}
+.content_taco p {
+    padding: 5px 0;
+}
+.content_taco h2 {
+    padding: 10px 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Button */
+button#more {
+    background-color: #ffc600;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+
+}
+/* Gallery */
+
+.gallery h2:before {
+    content: '';
+    background-image: linear-gradient(to right, rgba(255,0,0,0), #ffc600);
+    height: 10px;
+}
+.gallery h2:after{
+    content: '';
+    background-image: linear-gradient(to left, rgba(255,0,0,0), #ffc600);
+    height: 10px;
+}
+ .gallery h2 {
+     color: rgba(0,0,0,0.7);
+     text-align: center;
+     margin-top: 5px;
+     margin-bottom: 10px; 
+     display: grid;
+     grid-template-columns: 1fr auto 1fr;
+     grid-gap: 20px;
+     align-items: center;
+     padding: 10px;
+     
+ }
+ .gallery img {
+    width: 100%;
+    height: auto;
+ }
+ .image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-rows: 1fr 1fr; */
+    grid-gap: 20px;
+}
+@media only screen and (min-width: 758px) {
+
+    .wrapper_1 {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-areas: 
+        "h h i1"
+        "h h i2";
+        grid-gap: 20px;
+    }
+ 
+    .featured_taco {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 758px) {
+    
+    .wrapper_1 {
+        display: grid;
+        grid-template-areas: 
+        "h h"
+        "i1 i2";
+        grid-gap: 20px;
+}
+}
+
+@media only screen and (max-width: 513px) {
+    .wrapper_1 {
+        display: grid;
+        grid-template-areas: 
+        "h h"
+        "i1 i1"
+        "i2 i2";
+        grid-gap: 20px;
+    }
+}

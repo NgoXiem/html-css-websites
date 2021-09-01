@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    background: #333;
+    margin: 0;
+}
+
+.bg-img {
+    
+    /*The image used*/
+    background: #333 url(./pexels-photo-248515.png);
+    /*Center and scale the imge*/
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+   /*Height and Width*/
+    width: 100%;
+    height: 450px;
+    
+    /*Blur Effect*/
+    z-index: -1;
+    opacity: 0.4;
+
+}
+
+ /*Position text in the middle of the image*/
+
+ .bg-text {
+     color: #fff;
+     text-align: center;
+     margin: 0;
+     padding: 0 30px 30px 30px;
+}   
+
+.bg-text h1, .bg-text p {
+    margin: 0;
+}
+.bg-text h1 {
+    padding-top: 80px;
+    line-height: 1.6em;
+    
+}
+.bg-text p {
+    padding: 30px 0;
+}
+/* The button*/
+
+    .btn {
+        display: inline-block;
+        text-align: center;
+        margin: 20px 0;
+        padding: 20px 40px;
+        background-color: #333;
+        cursor: pointer;
+        border: 1px solid #666;
+        text-decoration: none;
+        color: #eaeaea;
+    }
+    
+    .btn:hover {
+        background-color: #eaeaea;
+        color: #333;
+    }
+
+.intro, .need, .item {
+    background: #fff;
+    text-align: center;
+    color: #333;
+}
+
+.service section {
+    text-align: center;
+    color: #333;
+}
+
+.contact {
+    background: #2690d4;
+}
+
+.about, .contact, footer {
+        color: #fff;
+        text-align: center;
+}
+    
+footer span{
+        font-style: italic;
+}
+footer {
+        background-color: black;
+}
+
+.service {
+    scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 700px) {
+    main img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .service section {
+        padding: 10px 10px;
+    }
+    .service {
+        padding: 30px 0;
+    }
+
+    .item {
+        padding: 40px 20px;
+    }
+
+    .item h3 {
+        margin-top: 0;
+        padding: 10px 0;
+    }
+    h2 {
+        padding: 20px 10px;
+    }
+    .intro, .about, .contact, .need, footer {
+        padding: 20px 0;
+    }
+    .intro p, .about p, .contact p, .need p {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 701px){
+    footer p{
+        margin: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    h2 {
+        padding: 25px 10px;
+    }
+    #intro {
+        column-count: 2;
+        column-gap: 5%;
+        margin: 0;
+        padding: 1.5em;
+    }
+    .intro h2 {
+        padding: 1.5em;
+        margin: 0;
+    }
+    .intro {
+        padding-bottom: 20px;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    #info div {
+        padding: 2em;
+    }
+    #info p, #info h2 {
+        margin: 0;
+        padding: 1em 1em 1.5em 1.5em;
+    }
+    .need p{
+        margin: 0;
+        padding: 1.5em 2em 1.5em 1.5em;
+    }
+    .need {
+        margin: 0;
+        padding: 2.5em;
+    }
+    .need h2 {
+        margin: 0;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        grid-column-gap: 20px;
+        padding: 40px 20px;
+    }
+    section img {
+        width: 100%;
+        height: auto;
+    }
+    .grid-item p, .grid-item h3 {
+        margin: 0;
+        padding: 20px;
+    }
+    .item {
+        padding: 20px;
+    }
+}
